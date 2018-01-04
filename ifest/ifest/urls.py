@@ -20,6 +20,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     # url(r'^i2c/', include("I2C.urls")),
-    # url(r'^ifoc/', include("IFOC.urls")),
+    url(r'^ifoc/', include("IFOC.urls")),
     # url(r'^workshop/', include("Workshop.urls")),
 ]

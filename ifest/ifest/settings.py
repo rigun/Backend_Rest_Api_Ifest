@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'corsheaders',
     # 'I2C.apps.I2CConfig',
-    # 'IFOC.apps.IfocConfig',
+    'IFOC.apps.IfocConfig',
     # 'Workshop.apps.WorkshopConfig',
 ]
 
