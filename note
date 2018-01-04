@@ -1,0 +1,13 @@
+- install pyton
+- pip install django==2.0
+- python -m django --version // untuk melihat versi dari django
+- django-admin startproject mysite // mysite boleh diganti kecuali nama test atau django
+- python manage.py runserver
+- python manage.py startapp polls
+- lakukan pengeditan pada setting.py
+- python manage.py migrate
+- lakukan pengeditan pada polls.models. // untuk membuat model
+- python manage.py makemigrations polls
+- python manage.py sqlmigrate polls 0001 // mengecek field yang akan dibuat
+----- API-----
+-> python migrate.py shell // masuk pada mode python
