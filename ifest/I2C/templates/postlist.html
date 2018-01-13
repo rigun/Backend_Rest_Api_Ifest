@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<htmL>
+    <head>
+        <title>Data Lomba</title>
+    </head>
+    <body>
+        <h1>All Data</h1>
+        <form>
+            {% if dataK %}
+            {% for data in dataK %}
+            
+                <p>Kelompok {{ forloop.counter }}</p>
+                <p>Nama Kelompok : {{ data.nama_kel }}</p>
+                <p>Guru Pembimbing : {{ data.guru_pem }}</p>
+                <p>Asal Sekolah : {{ data.asalSekolah }}</p>
+                <p>Alamat Sekolah : {{ data.alamatSekolah }}</p>
+                <p>No Telp Sekolah : {{ data.noTelpSekolah }}</p>
+                <p>Username : {{ data.username }}</p>
+                <br />
+            
+                {% if dataP %}
+                    {% for peserta in dataP %} 
+
+                        {% if peserta.dataKel_id == data.id %}
+                            <p>----Data Anggota : </p>
+                            <p>----NIS : {{ peserta.nis }}</p>
+                            <p>----Nama : {{ peserta.nama_leng }}</p>
+                            <p>----Foto : </p>
+                            <img src="/media/{{peserta.foto}}" style="width:200px; height:200px"/>
+                            
+                         {% endif %}
+
+                        {% empty %} 
+                            <p>Tidak punya anggota</p>
+                    {% endfor %}
+                
+                {% endif %}
+                <br />
+                <br />
+                <hr />
+            {% endfor %}
+
+            {% else %}
+            
+                <p>Tidak ada data kelompok...<p>
+            
+            {% endif %}
+
+        </form>
+    </body>

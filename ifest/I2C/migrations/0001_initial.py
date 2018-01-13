@@ -26,8 +26,8 @@ class Migration(migrations.Migration):
                 ('mailGuru', models.CharField(max_length=100)),
                 ('mailKetua', models.CharField(max_length=100)),
                 ('idLine', models.CharField(max_length=40)),
-                ('password', models.CharField(max_length=256)),
                 ('username', models.CharField(max_length=100, unique=True)),
+                ('password', models.CharField(max_length=256)),
                 ('pub_date', models.DateTimeField(auto_now_add=True)),
             ],
         ),
@@ -37,7 +37,7 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('nama_leng', models.CharField(max_length=60)),
                 ('nis', models.IntegerField(default=0)),
-                ('dataKel', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='IFOC.dataKelompok')),
+                ('dataKel', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='I2C.dataKelompok')),
             ],
         ),
     ]

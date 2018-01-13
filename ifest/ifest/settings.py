@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
-    # 'I2C.apps.I2CConfig',
+    'I2C.apps.I2CConfig',
     'IFOC.apps.IfocConfig',
     # 'Workshop.apps.WorkshopConfig',
 ]
@@ -147,6 +147,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, '..', 'foto_peserta')
+MEDIA_URL = '/media/'
 
 JWT_AUTH = {
     'JWT_ENCODE_HANDLER':
