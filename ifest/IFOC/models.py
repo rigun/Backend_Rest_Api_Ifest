@@ -4,7 +4,7 @@ from django.utils import timezone
 from passlib.hash import pbkdf2_sha256
 
 class dataKelompok(models.Model):
-    nama_kel = models.CharField(max_length=60, blank=True)
+    nama_kel = models.CharField(max_length=60)
     guru_pem = models.CharField(max_length=60)
     asalSekolah = models.CharField(max_length=60)
     alamatSekolah = models.CharField(max_length=200)
